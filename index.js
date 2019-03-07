@@ -17,7 +17,8 @@ for (let y = 0; y < 10; y++) {
         ]
       },
       properties: {
-        iso3cd: codes[i]
+        iso3cd: codes[i],
+        name: countries.getName(codes[i], 'en')
       }
     }
     geojson.features.push(f)
