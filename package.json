@@ -1,0 +1,23 @@
+{
+  "name": "iso3cd-scaffold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfu/iso3cd-scaffold.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/hfu/iso3cd-scaffold/issues"
+  },
+  "homepage": "https://github.com/hfu/iso3cd-scaffold#readme",
+  "dependencies": {
+    "i18n-iso-countries": "^3.7.8"
+  }
+}
