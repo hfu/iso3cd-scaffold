@@ -1,4 +1,5 @@
 const countries = require('i18n-iso-countries')
+const fs = require('fs')
 
 let geojson = { type: 'FeatureCollection', features: [] }
 const codes = Object.keys(countries.getAlpha3Codes())
@@ -12,7 +13,7 @@ for (let y = 0; y < 10; y++) {
         type: 'Point',
         coordinates: [
           30 + 12 * x - 180,
-          30 + 12 * y - 90
+          90 - 30 - 12 * y
         ]
       },
       properties: {
@@ -23,4 +24,11 @@ for (let y = 0; y < 10; y++) {
   }
 }
 
-console.log(JSON.stringify(geojson, null, 2))
+fs.writeFile(
+  'scaffold.geojson',
+  JSON.stringify(geojson, null, 2),
+  (err) => {
+    if (err) throw err
+    console.log('scaffold.geojson written')
+  }
+)
